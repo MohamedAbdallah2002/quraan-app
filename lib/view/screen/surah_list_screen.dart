@@ -12,7 +12,7 @@ class SurahListScreen extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.background, // Updated to match the surface theme
+        backgroundColor: Theme.of(context).colorScheme.background, 
         appBar: AppBar(
           title: Column(
             children: [
@@ -21,26 +21,26 @@ class SurahListScreen extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.star_rounded,
-                    color: Colors.amber, // Updated to static color
+                    color: Colors.amber, 
                     size: 20,
                   ),
                   const SizedBox(width: 8),
                   const Text(
                     'القرآن الكريم',
-                    style: TextStyle(color: Colors.black), // Updated for a black title
+                    style: TextStyle(color: Colors.black),
                   ),
                   const SizedBox(width: 8),
                   Icon(
                     Icons.star_rounded,
-                    color: Colors.amber, // Updated to static color
+                    color: Colors.amber, 
                     size: 20,
                   ),
                 ],
               ),
             ],
           ),
-          backgroundColor: Colors.white, // Added a custom app bar background color
-          elevation: 0.5, // Slight shadow for separation
+          backgroundColor: Colors.white,
+          elevation: 0.5, 
         ),
         body: ListView.builder(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
@@ -50,7 +50,7 @@ class SurahListScreen extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 12),
               child: Card(
                 elevation: 2,
-                shadowColor: Colors.grey.withOpacity(0.3), // Custom shadow color
+                shadowColor: Colors.grey.withOpacity(0.3), 
                 child: InkWell(
                   borderRadius: BorderRadius.circular(20),
                   onTap: () {
@@ -68,10 +68,10 @@ class SurahListScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       border: Border.all(
-                        color: Colors.grey.withOpacity(0.2), // Updated border color
+                        color: Colors.grey.withOpacity(0.2),
                         width: 1,
                       ),
-                      color: Colors.white, // Updated container color
+                      color: Colors.white, 
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(16),
@@ -85,13 +85,13 @@ class SurahListScreen extends StatelessWidget {
                                 begin: Alignment.topLeft,
                                 end: Alignment.bottomRight,
                                 colors: [
-                                  Colors.blue.shade600, // Gradient start
-                                  Colors.blue.shade300, // Gradient end
+                                  Colors.blue.shade600, 
+                                  Colors.blue.shade300,
                                 ],
                               ),
                               borderRadius: BorderRadius.circular(16),
                               border: Border.all(
-                                color: Colors.blueAccent.withOpacity(0.5), // Updated gradient border
+                                color: Colors.blueAccent.withOpacity(0.5), 
                                 width: 1,
                               ),
                             ),
@@ -99,11 +99,11 @@ class SurahListScreen extends StatelessWidget {
                               child: Text(
                                 '${index + 1}',
                                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                                  color: Colors.white, // White text for contrast
+                                  color: Colors.white,
                                   fontSize: 20,
                                   shadows: [
                                     Shadow(
-                                      color: Colors.grey.withOpacity(0.3), // Softer shadow for text
+                                      color: Colors.grey.withOpacity(0.3), 
                                       offset: const Offset(1, 1),
                                       blurRadius: 2,
                                     ),
@@ -121,7 +121,7 @@ class SurahListScreen extends StatelessWidget {
                                   quranList[index].name,
                                   style: Theme.of(context).textTheme.titleLarge?.copyWith(
                                     fontSize: 20,
-                                    color: Colors.black, // Black text for clarity
+                                    color: Colors.black,
                                   ),
                                 ),
                                 const SizedBox(height: 4),
@@ -130,13 +130,13 @@ class SurahListScreen extends StatelessWidget {
                                     Icon(
                                       Icons.format_list_numbered_rounded,
                                       size: 16,
-                                      color: Colors.blueAccent, // Updated to blue accent
+                                      color: Colors.blueAccent, 
                                     ),
                                     const SizedBox(width: 4),
                                     Text(
                                       '${quranList[index].ayat} آية',
                                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                                        color: Colors.blueGrey, // Softer blue for readability
+                                        color: Colors.blueGrey,
                                         fontSize: 14,
                                       ),
                                     ),
@@ -149,17 +149,17 @@ class SurahListScreen extends StatelessWidget {
                             width: 32,
                             height: 32,
                             decoration: BoxDecoration(
-                              color: Colors.blueAccent.withOpacity(0.1), // Light background for the icon
+                              color: Colors.blueAccent.withOpacity(0.1), 
                               borderRadius: BorderRadius.circular(10),
                               border: Border.all(
-                                color: Colors.blueAccent.withOpacity(0.2), // Updated border color
+                                color: Colors.blueAccent.withOpacity(0.2), 
                                 width: 1,
                               ),
                             ),
                             child: Icon(
                               Icons.arrow_back_ios_rounded,
                               size: 16,
-                              color: Colors.blueAccent, // Arrow color to match theme
+                              color: Colors.blueAccent, 
                             ),
                           ),
                         ],

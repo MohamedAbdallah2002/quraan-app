@@ -30,9 +30,9 @@ class _QuranPageViewState extends State<QuranPageView> {
                 backgroundColor: Theme.of(context).colorScheme.background,
                 extendBodyBehindAppBar: true,
                 appBar: AppBar(
-                  backgroundColor: Colors.blueGrey.shade900.withOpacity(0.9), // Updated app bar background
+                  backgroundColor: Colors.blueGrey.shade900.withOpacity(0.9),
                   leading: IconButton(
-                    icon: const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white), // White for visibility
+                    icon: const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white), 
                     onPressed: () => Navigator.pop(context),
                   ),
                   title: Column(
@@ -41,7 +41,7 @@ class _QuranPageViewState extends State<QuranPageView> {
                         ' ${widget.quranData[state.currentPage].name}',
                         style: TextStyle(
                           fontSize: 20,
-                          color: Colors.white, // White text for clarity
+                          color: Colors.white, 
                         ),
                       ),
                       Row(
@@ -50,13 +50,13 @@ class _QuranPageViewState extends State<QuranPageView> {
                           Icon(
                             Icons.format_list_numbered_rounded,
                             size: 14,
-                            color: Colors.yellowAccent, // Accent color
+                            color: Colors.yellowAccent,
                           ),
                           const SizedBox(width: 4),
                           Text(
                             '${widget.quranData[state.currentPage].ayat} آية',
                             style: const TextStyle(
-                              color: Colors.white70, // Softer white
+                              color: Colors.white70,
                               fontSize: 14,
                             ),
                           ),
@@ -64,7 +64,7 @@ class _QuranPageViewState extends State<QuranPageView> {
                       ),
                     ],
                   ),
-                  elevation: 0, // Flat app bar
+                  elevation: 0,
                 ),
                 body: PageView.builder(
                   controller: PageController(initialPage: state.currentPage),
@@ -79,7 +79,7 @@ class _QuranPageViewState extends State<QuranPageView> {
                         children: [
                           Card(
                             elevation: 4,
-                            shadowColor: Colors.blueAccent.withOpacity(0.2), // Softer shadow
+                            shadowColor: Colors.blueAccent.withOpacity(0.2), 
                             child: Container(
                               width: double.infinity,
                               padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 20),
@@ -102,7 +102,7 @@ class _QuranPageViewState extends State<QuranPageView> {
                                     child: Icon(
                                       Icons.star_rounded,
                                       size: 60,
-                                      color: Colors.white.withOpacity(0.2), // Faint star
+                                      color: Colors.white.withOpacity(0.2),
                                     ),
                                   ),
                                   Positioned(
@@ -111,7 +111,7 @@ class _QuranPageViewState extends State<QuranPageView> {
                                     child: Icon(
                                       Icons.star_rounded,
                                       size: 50,
-                                      color: Colors.white.withOpacity(0.15), // Faint star
+                                      color: Colors.white.withOpacity(0.15)
                                     ),
                                   ),
                                   Center(
@@ -119,10 +119,10 @@ class _QuranPageViewState extends State<QuranPageView> {
                                       'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ',
                                       style: const TextStyle(
                                         fontSize: 30,
-                                        color: Colors.white, // White text for clarity
+                                        color: Colors.white, 
                                         shadows: [
                                           Shadow(
-                                            color: Colors.black26, // Light shadow
+                                            color: Colors.black26, 
                                             offset: Offset(2, 2),
                                             blurRadius: 4,
                                           ),
@@ -138,7 +138,7 @@ class _QuranPageViewState extends State<QuranPageView> {
                           const SizedBox(height: 24),
                           Card(
                             elevation: 2,
-                            shadowColor: Colors.black26, // Subtle shadow
+                            shadowColor: Colors.black26,
                             child: Padding(
                               padding: const EdgeInsets.all(20),
                               child: Text(
@@ -146,7 +146,7 @@ class _QuranPageViewState extends State<QuranPageView> {
                                 style: TextStyle(
                                   fontSize: fontSize,
                                   height: 2.2,
-                                  color: Colors.black87, // Dark text for contrast
+                                  color: Colors.black87, 
                                 ),
                                 textAlign: TextAlign.justify,
                                 textDirection: TextDirection.rtl,
@@ -158,39 +158,14 @@ class _QuranPageViewState extends State<QuranPageView> {
                     );
                   },
                 ),
-                floatingActionButton: Container(
-                  margin: const EdgeInsets.only(bottom: 16),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      FloatingActionButton(
-                        heroTag: "decreaseFontSize",
-                        onPressed: () => setState(() {
-                          fontSize = fontSize > 16 ? fontSize - 2 : fontSize;
-                        }),
-                        backgroundColor: Colors.deepPurple,
-                        child: const Icon(Icons.remove, color: Colors.white),
-                      ),
-                      const SizedBox(width: 16),
-                      FloatingActionButton(
-                        heroTag: "increaseFontSize",
-                        onPressed: () => setState(() {
-                          fontSize = fontSize < 36 ? fontSize + 2 : fontSize;
-                        }),
-                        backgroundColor: Colors.deepPurple,
-                        child: const Icon(Icons.add, color: Colors.white),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+                 ),
             );
           }
           return Scaffold(
             backgroundColor: Theme.of(context).colorScheme.background,
             body: Center(
               child: CircularProgressIndicator(
-                color: Colors.deepPurple, // Progress color
+                color: Colors.blueGrey,
                 strokeWidth: 2,
               ),
             ),
